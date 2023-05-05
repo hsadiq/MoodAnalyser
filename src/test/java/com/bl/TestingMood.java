@@ -6,6 +6,17 @@ import static org.junit.Assert.assertEquals;
 
 public class TestingMood {
 
+
+    //TC2.1
+
+    @Test
+    public void testAnalyseMoodForNull(){
+        ExceptionMood analyse = new ExceptionMood("My mood is Null");
+        String mood = analyse.analyseMood();
+        assertEquals("HAPPY", mood);
+        System.out.println(mood);
+    }
+
     //TC1.1
 
     @Test
@@ -23,6 +34,8 @@ public class TestingMood {
         assertEquals("HAPPY", mood);
         System.out.println(mood);
     }
+
+    //TC1.2
 
     @Test
     public void testAnalyseMoodForAny(){
