@@ -3,12 +3,17 @@ package com.bl;
 public class MoodAnalyzer {
 
     private String message;
+
+    public MoodAnalyzer() {
+        this.message = "";
+    }
+
     public MoodAnalyzer(String message) {
         this.message = message;
     }
 
     public String moodAnalyze() {
-        if (message.trim().toLowerCase().contains("sad")) {
+        if (this.message.trim().toLowerCase().indexOf("sad") != -1) {
             return "SAD";
         }else {
             return "HAPPY";
