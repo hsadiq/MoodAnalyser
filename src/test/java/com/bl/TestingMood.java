@@ -31,5 +31,15 @@ public class TestingMood {
             Assertions.assertEquals(MoodAnalysisException.ExceptionType.NULL_MOOD, e.getType());
         }
     }
+
+    @Test
+    public void empMood(){
+        MoodAnalyzer analyzer = new MoodAnalyzer("");
+        try {
+            analyzer.moodAnalyze();
+        }catch (MoodAnalysisException e){
+            Assertions.assertEquals(MoodAnalysisException.ExceptionType.EMPTY_MOOD, e.getType());
+        }
+    }
 }
 
